@@ -10,7 +10,7 @@ const bar = (err) => {
   throw new Error('OH NO');
 }
 
-foo()
+foo(true)
 .then(() => {
   console.log('foo has resolved');
   throw new Error('SOMETHING IS VERY WRONG');
