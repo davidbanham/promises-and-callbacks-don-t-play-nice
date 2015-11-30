@@ -16,3 +16,4 @@ foo()
   throw new Error('SOMETHING IS VERY WRONG');
   bar();
 }, bar)
+.catch(bar)
