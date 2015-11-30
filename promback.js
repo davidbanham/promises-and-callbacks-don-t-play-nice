@@ -13,5 +13,6 @@ const bar = (err) => {
 foo()
 .then(() => {
   console.log('foo has resolved');
+  throw new Error('SOMETHING IS VERY WRONG');
   bar();
 }, bar)
