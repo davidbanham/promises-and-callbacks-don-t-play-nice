@@ -10,9 +10,8 @@ const bar = (err) => {
   throw new Error('OH NO');
 }
 
-foo(true)
+foo()
 .then(() => {
   console.log('foo has resolved');
   bar();
-})
-.catch(bar);
+}, bar)
