@@ -10,12 +10,11 @@ const bar = (err) => {
   throw new Error('OH NO');
 }
 
-foo(true)
+foo()
 .then((somedata) => {
   // perform some data transformation. Maybe it throws?
   throw new Error('SOMETHING IS VERY WRONG');
 })
-.catch(bar)
 .then(() => {
   bar();
 }, bar)
